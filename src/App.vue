@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Checklist from './components/Checklist.vue';
+import Checklist from './components/Checklist/Checklist.vue';
 
 export default defineComponent({
   components: {

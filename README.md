@@ -6,6 +6,7 @@ A simple ToDo List application built using Vue.js and Vite.
 
 - Add tasks to your ToDo list
 - Mark tasks as completed
+- Mark a priority level
 - Edit existing tasks
 - Remove tasks from the list
 

@@ -10,9 +10,16 @@
 
     <ul class="task-list">
       <li v-for="(task, index) in tasks" :key="index" class="task">
-        <input type="checkbox" v-model="task.completed" class="checkbox" />
-        <span :class="{ completed: task.completed }">{{ task.text }}</span>
-        <button @click="removeTask(index)" class="remove-button">Remover</button>
+        <div v-if="task.editing">
+          <input type="text" v-model="task.editedText" @keyup.enter="saveTask(task)" class="edit-input" />
+          <button @click="cancelEditing(task)" class="cancel-button">Cancelar</button>
+          <button @click="saveTask(task)" class="save-button">Salvar</button>
+        </div>
+        <div v-else class="task-content">
+          <input type="checkbox" v-model="task.completed" class="checkbox" />
+          <span :class="{ completed: task.completed }" @click="editTask(task)">{{ task.text }}</span>
+          <button @click="removeTask(index)" class="remove-button">Remover</button>
+        </div>
       </li>
     </ul>
   </div>
@@ -37,7 +44,7 @@ export default {
   methods: {
     addTask() {
       if (this.newTask.trim() !== '') {
-        this.tasks.push({ text: this.newTask, completed: false });
+        this.tasks.push({ text: this.newTask, completed: false, editing: false, editedText: '' });
         this.newTask = '';
       }
     },
@@ -53,6 +60,19 @@ export default {
       this.tasks.forEach((task) => {
         task.completed = false;
       });
+    },
+    editTask(task) {
+      task.editing = true;
+      task.editedText = task.text;
+    },
+    cancelEditing(task) {
+      task.editing = false;
+    },
+    saveTask(task) {
+      if (task.editedText.trim() !== '') {
+        task.text = task.editedText;
+      }
+      task.editing = false;
     },
   },
 };
@@ -116,9 +136,39 @@ export default {
   text-decoration: line-through;
 }
 
+.task-content {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
 .remove-button {
   margin-left: auto;
   background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-input {
+  width: 100%;
+  padding: 4px;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.cancel-button {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-button {
+  background-color: #4caf50;
   color: #fff;
   border: none;
   border-radius: 4px;

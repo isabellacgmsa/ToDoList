@@ -34,7 +34,7 @@
     </div>
 
     <ul class="task-list">
-      <li v-for="(task, index) in tasksFiltered" :key="index" class="task mb-4 p-4 bg-gray rounded-md shadow">
+      <li v-for="(task, index) in tasksFiltered" :key="index" class="task mb-4 p-4 bg-gray-150 rounded-md shadow">
         <div v-if="task.editing" class="flex items-center mb-2">
           <input
             type="text"

@@ -10,6 +10,30 @@ A simple ToDo List application built using Vue.js and Vite.
 - Edit existing tasks
 - Remove tasks from the list
 
+### How to Use the Edit Feature
+
+To edit a task in the To-Do List, follow these steps:
+
+1. Find the task you want to edit in the task list.
+
+2. Click on the task text to activate the editing mode.
+
+3. The task text will become an input field where you can make changes.
+
+4. Modify the task text as desired.
+
+5. Press the Enter key to save the changes and exit the editing mode.
+
+   - Alternatively, you can click the "Save" button to save the changes.
+
+6. If you decide not to save the changes, you can click the "Cancel" button to exit the editing mode without modifying the task.
+
+7. The task will be updated with the new text you entered.
+
+Please note that you can only edit one task at a time. Once you finish editing a task, you can proceed to edit another task if needed.
+
+Feel free to experiment with the edit feature to update your tasks and keep your To-Do List organized!
+
 ## Technologies Used
 
 - Vue 3 - JavaScript framework for building user interfaces

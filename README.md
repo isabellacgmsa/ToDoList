@@ -1,41 +1,72 @@
-# Teste tecnologia WeedWay
+# ToDo List Application
 
-Constuir um clone de funcionalidade mínima do [todoist](https://todoist.com/pt-BR)
+A simple ToDo List application built using Vue.js and Vite.
 
-Utilize a seguinte stack:
-- Vue3
-- Vite
-- Typescript
-- Nuxt
-- Tailwind
-- Pinia
-- pnpm
+## Features
 
-Siga o stuleguide do Airbnb para Vue.js conforme esta [documentação](https://github.com/vuejs/eslint-config-airbnb/tree/main/packages/eslint-config-airbnb-with-typescript#readme)
+- Add tasks to your ToDo list
+- Mark tasks as completed
+- Mark a priority level
+- Edit existing tasks
+- Remove tasks from the list
 
-Features necessárias:
-- Checklist
-- mais uma feature a sua escolha
+### How to Use the Edit Feature
 
-Não é necessário desenvolver backend, você pode mockar as chamadas para o back com estado local no front (mas se preferir pode desenvlver no Nuxt também).
+To edit a task in the To-Do List, follow these steps:
 
-Queremos avaliar sua estruturação de stores utilizando o pinia, então busque demonstrar sua estruturação e utilidade no projeto.
+1. Find the task you want to edit in the task list.
 
-O foco do teste é avaliar a habilidade do candidato em estruturar um projeto de frontend e utilizar boas práticas das tecnologias indicadas (vue, pinia, nuxt e design system em tailwind).
+2. Click on the task text to activate the editing mode.
 
-Serão avaliados:
-- Funcionalidade e performance do app desenvolvido
-- Uso de features e sintaxe do Vue3
-- Código limpo e legível em Typescript
-- Boas práticas de programação em geral
-- Documentação e organização do projeto
+3. The task text will become an input field where you can make changes.
 
-Não são importantes para a avaliação:
-- Visual do projeto não precisa ser perfeito, focar em um projeto simples, mas mostrar que sabe estruturar tailwind
-- Estamos buscando um candidato que consiga iterar rápido e entregar produtos utilizáveis rápido - priorize a boa execução de algumas features em vez de tentar fazer um app complexo e demorado
+4. Modify the task text as desired.
 
-## Entrega
+5. Press the Enter key to save the changes and exit the editing mode.
 
-Clone este repositório e crie um repositório privado no seu github. Compartilhe o acesso ao repo com `veigajoao` e `p-destri`.
-Crie uma Pull Request para a `main` de seu github com sua implmenetação do projeto.
-A PR e os commits devem estar estruturados com melhores práticas em vista para facilitar a revisão e manutenção de código.
+   - Alternatively, you can click the "Save" button to save the changes.
+
+6. If you decide not to save the changes, you can click the "Cancel" button to exit the editing mode without modifying the task.
+
+7. The task will be updated with the new text you entered.
+
+Please note that you can only edit one task at a time. Once you finish editing a task, you can proceed to edit another task if needed.
+
+Feel free to experiment with the edit feature to update your tasks and keep your To-Do List organized!
+
+## Technologies Used
+
+- Vue 3 - JavaScript framework for building user interfaces
+- Vite - Build tooling for modern web development
+- TypeScript - Typed superset of JavaScript
+- Nuxt - Vue framework for server-side rendering and static site generation
+- Tailwind CSS - Utility-first CSS framework
+- Pinia - State management for Vue
+- pnpm - Package manager
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (version 12 or above)
+- pnpm (install globally with `npm install -g pnpm`)
+
+### Installation
+
+1. Clone the repository:
+
+   ```
+   git clone https://github.com/isabellacgmsa/teste-frontend.git
+2. Navigate to the project directory:
+
+ ```cd teste-frontend```
+
+3. Install the dependencies using pnpm:
+```pnpm install```
+
+### Usage
+Start the development server:
+
+```pnpm dev```
+
+Open your browser and visit http://localhost:5173 to access the application.
